@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Payment Form">
+
+        <!-- Title -->
+        <title>Payment Form</title>
+
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="payment_form.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="main_heading">Payment Form</h1>
+            <form method="GET">
+                <p class="main_heading" style="color: red; font-size: smaller;">Required fields are followed by *</p>
+
+                <!-- User Details -->
+                <fieldset>
+                    <legend><h2>User Details</h2></legend>
+
+                    <!-- Name -->
+                    <label for="user_name">Name *: &nbsp; &nbsp;</label>
+                    <input type="text" name="user_name" id="user_name" placeholder="Ayush Raj" class="focus" required><br><br>
+
+                    <!-- Gender -->
+                    <fieldset id="gender-fieldset" class="focus">
+                        <legend>Gender</legend>
+
+                        <input type="radio" name="user_gender" class="user_gender" value="user_gender_male" required id="user_gender_male"><label for="user_gender_male">Male</label>
+                        <input type="radio" name="user_gender" class="user_gender" value="user_gender_female" id="user_gender_female" required><label for="user_gender_female">Female</label>
+                    </fieldset>
+                <br>
+
+                    <!-- Address -->
+                    <label for="user_address" style="vertical-align: top;">Address *: </label>
+                    <textarea name="user_address" id="user_address" cols="50" rows="10" placeholder="Enter Your Address" class="focus" required></textarea><br><br>
+
+                    <!-- E-mail -->
+                    <label for="user_email">E-mail *: &nbsp;</label>
+                    <input type="email" name="user_email" id="user_email" placeholder="abc191@gmail.com" class="focus" required><br><br>
+
+                    <!-- Pincode -->
+                    <label for="user_pincode">Pincode *: </label>
+                    <input type="number" name="user_pincode" id="user_pincode" placeholder="123456" class="focus" required><br><br>
+                </fieldset>
+
+                <hr>
+
+                <!-- Payment Details -->
+                <fieldset>
+                    <legend><h2>Payment Details</h2></legend>
+
+                    <!-- Card Type -->
+                    <label for="payment_card_type">Card Type *:</label>
+                    <select name="payment_card_type" id="payment_card_type" class="focus" required>
+                        <option value="">--Select Card Type--</option>
+                        <optgroup label="Credit Card">
+                            <option value="credit_visa">Visa Credit Card</option>
+                            <option value="credit_mastercard">MasterCard Credit Card</option>
+                            <option value="credit_citibank">CitiBank Credit Card</option>
+                        </optgroup>
+                        <optgroup label="Debit Card">
+                            <option value="debit_visa">Visa Debit Card</option>
+                            <option value="debit_mastercard">MasterCard Debit Card</option>
+                            <option value="debit_citibank">CitiBank Debit Card</option>
+                        </optgroup>
+                    </select><br><br>
+
+                    <!-- Card Number -->
+                    <label for="payment_card_number">Card Number *:</label>
+                    <input type="number" name="payment_card_number" id="payment_card_number" placeholder="1111-2222-3333-4444" class="focus" required><br><br>
+
+                    <!-- Expiration Date -->
+                    <label for="payment_expiration_date">Expiration Date *:</label>
+                    <input type="date" name="payment_expiration_date" id="payment_expiration_date" class="focus" required><br><br>
+
+                    <!-- CVV -->
+                    <label for="payment_cvv">CVV *:</label>
+                    <input type="password" name="payment_cvv" id="payment_cvv" placeholder="123" class="focus" required>
+
+                </fieldset>
+
+                <br>
+                
+                <input type="submit" value="Pay Now" class="button">
+                
+                <input type="reset" class="button" value="Reset">
+
+            </form>
+        </div>
+    </body>
+</html>
